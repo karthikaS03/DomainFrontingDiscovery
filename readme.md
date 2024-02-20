@@ -15,7 +15,7 @@ Before using this tool, you need to specify information about the domains and th
 - `full_domain`: denotes the fully qualified domain name associated with a CDN according to the DNS records
 - `domain_sld`: eTLD+1 of the full_domain field
 
-This CSV file should be passed to the tool as the parameter `cdn_domain_mapping_file_path` using `config.ini`.
+This CSV file should be passed to the tool as the parameter `cdn_domain_mapping_file_path` using `config.ini`. To map the domains associated with CDNs, we leverage Passive and ([ActiveDNS](http://www.activednsproject.org/)) records in our research. While that code isn't made publicly available, we provide a list of CDN host names that we identified as associated to a CDN in the file "cdn_domain_mapper/cdn_domain_keywords.csv".
 
 ### Modules
 
@@ -38,3 +38,18 @@ This CSV file should be passed to the tool as the parameter `cdn_domain_mapping_
     ```python
     # python FrontingTester.py
     ```
+
+## Contact
+
+For questions or feedback, you can reach us at:
+- Email: [example@email.com](mailto:ksubramani@gatech.edu)
+
+## Citation
+
+If you use this project in your research or find it helpful, please consider citing the paper:
+
+@misc{paper_link,
+title = {Discovering and Measuring CDNs Prone to Domain Fronting},
+year = {2024},
+howpublished = {\url{https://doi.org/10.1145/3589334.3645656}}
+}
