@@ -42,7 +42,7 @@ This CSV file should be passed to the tool as the parameter `cdn_domain_mapping_
 ## Contact
 
 For questions or feedback, you can reach us at:
-- Email: [example@email.com](mailto:ksubramani@gatech.edu)
+- Email: [ksubramani@gatech.edu](mailto:ksubramani@gatech.edu)
 
 ## Citation
 
