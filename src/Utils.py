@@ -1,7 +1,8 @@
 import os
 import json
 import tldextract
-import configparser
+from configparser import ConfigParser, ExtendedInterpolation
+
 import pandas as pd
 
 
@@ -18,7 +19,8 @@ class FrontingUtils:
     
     @staticmethod
     def get_config():
-        config = configparser.ConfigParser()
+        # Create a ConfigParser object with ExtendedInterpolation
+        config = ConfigParser(interpolation=ExtendedInterpolation())
         config.read( os.path.dirname(os.path.abspath(__file__))+'/config.ini')
         return config
 

@@ -31,14 +31,23 @@ This CSV file should be passed to the tool as the parameter `cdn_domain_mapping_
     Python file `crawl_urls.py`. This program requires as input (read from config file) the CDN_DOMAIN mapping CSV file that uses the columns `cdn` and `domain_sld` to be crawled.
 
 2. **fronting_tester_module:**
-   This module is responsible for crafting requests required to test domain fronting for a given set of domains for different CDNs. This file takes the filtered list of resources and starts by generating test tuples that contain the different information required for performing fronting tests. Finally, the results of "valid" test cases are stored in the JSON file specified using the parameter `test_details_file_path` in the config file. Additionally, further validation is performed to filter successful fronting test cases that verify if the fronting test case is accurate. These carefully checked results are finally written in a JSON file specified using the parameter `fronting_success_cases_file_path` in the config file. 
+   This module is responsible for crafting requests required to test domain fronting for a given set of domains for different CDNs. This file takes the filtered list of resources and starts by generating test tuples that contain the different information required for performing fronting tests. Finally, the results of "valid" test cases are stored in the JSON file specified using the parameter `test_details_file_path` in the config file. Additionally, further validation is performed to filter successful fronting test cases that verify if the fronting test case is accurate. These verified sucessful results are finally written in a JSON file specified using the parameter `fronting_success_cases_file_path` in the config file. 
 
-    To execute the tester, run the command 
+    The tester can be executed in two different modes "single" or "batch" depending on the number of cases to test. 
+
+    To execute the tester in batch mode, run the command 
 
     ```python
-    # python FrontingTester.py
+    # python FrontingTester.py batch
     ```
 
+    To execute the tester in single mode, run the command 
+
+    ```python
+    # python FrontingTester.py single -target_domain <Target_domain> -front_domain <Front_domain> -target_url <Target_Url> 
+
+    ```
+    
 ## Contact
 
 For questions or feedback, you can reach us at:
